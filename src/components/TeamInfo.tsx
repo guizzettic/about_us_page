@@ -4,10 +4,10 @@ import email_line from "../assets/email_line.png";
 
 const TeamInfo: React.FC = () => {
   return (
-    <div className="flex flex-col justify-between h-[376px] w-[319px]">
-      {/* talk to team */}
-      <div className="h-[144px] w-[319px] flex flex-col justify-between">
-        <p className="text-4xl text-neutral-900 font-semibold">
+    <div className="flex flex-col justify-between h-[376px] w-[319px] md:h-[364px] md:w-[704px] xl:h-[376px] xl:w-[592px] xl:flex-col">
+      {/* text-pair section */}
+      <div className="h-[144px] w-[319px] md:h-[124px] md:w-[704px] xl:h-[136px] xl:w-[592px] flex flex-col justify-between">
+        <p className="text-4xl text-neutral-900 font-semibold tracking-wide">
           Talk to our team
         </p>
         <p className="text-lg text-gray-500">
