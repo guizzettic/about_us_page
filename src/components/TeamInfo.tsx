@@ -4,10 +4,10 @@ import email_line from "../assets/email_line.png";
 
 const TeamInfo: React.FC = () => {
   return (
-    <div className="flex flex-col justify-between h-[376px] w-[319px] md:h-[364px] md:w-[704px] xl:h-[376px] xl:w-[592px] xl:flex-col">
+    <div className="flex h-[376px] w-[319px] flex-col justify-between md:h-[364px] md:w-[704px] xl:h-[376px] xl:w-[592px] xl:flex-col">
       {/* text-pair section */}
-      <div className="h-[144px] w-[319px] md:h-[124px] md:w-[704px] xl:h-[136px] xl:w-[592px] flex flex-col justify-between">
-        <p className="text-4xl text-neutral-900 font-semibold tracking-wide">
+      <div className="flex h-[144px] w-[319px] flex-col justify-between md:h-[124px] md:w-[704px] xl:h-[136px] xl:w-[592px]">
+        <p className="text-4xl font-semibold tracking-wide text-neutral-900">
           Talk to our team
         </p>
         <p className="text-lg text-gray-500">
@@ -17,9 +17,9 @@ const TeamInfo: React.FC = () => {
       </div>
 
       {/* contact info section */}
-      <div className="h-[192px] w-[319px] flex flex-col justify-between">
-        <div className="flex gap-2 items-center m-0 p-0 bg-white">
-          <div className="border-t-white rounded-full shadow h-[48px] w-[48px] flex justify-center items-center">
+      <div className="flex h-[192px] w-[319px] flex-col justify-between">
+        <div className="m-0 flex items-center gap-2 bg-white p-0">
+          <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full border-t-white shadow">
             <img
               src={building_line}
               className="h-[24px] w-[24px] shadow"
@@ -32,8 +32,8 @@ const TeamInfo: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 items-center">
-          <div className="border-t-white rounded-full shadow h-[48px] w-[48px] flex justify-center items-center">
+        <div className="flex items-center gap-2">
+          <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full border-t-white shadow">
             <img
               src={phone_line}
               className="h-[24px] w-[24px] shadow"
@@ -43,8 +43,8 @@ const TeamInfo: React.FC = () => {
           <p>+1 (818) 555-0158</p>
         </div>
 
-        <div className="flex gap-2 items-center">
-          <div className="border-t-white rounded-full shadow h-[48px] w-[48px] flex justify-center items-center">
+        <div className="flex items-center gap-2">
+          <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full border-t-white shadow">
             <img
               src={email_line}
               className="h-[24px] w-[24px] shadow"
