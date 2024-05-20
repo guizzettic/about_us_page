@@ -4,7 +4,7 @@ import email_line from "../assets/email_line.png";
 
 const TeamInfo: React.FC = () => {
   return (
-    <div className="flex h-[376px] w-[319px] flex-col justify-between md:h-[364px] md:w-[704px] xl:h-[376px] xl:w-[592px] xl:flex-col">
+    <div className="flex h-[376px] w-[319px] flex-col justify-between bg-gray-200 pl-2 md:h-[364px] md:w-[704px] xl:h-[376px] xl:w-[592px] xl:flex-col">
       <div className="flex h-[144px] w-[319px] flex-col justify-between md:h-[124px] md:w-[704px] xl:h-[136px] xl:w-[592px]">
         <p className="text-4xl font-semibold tracking-wide text-neutral-900 md:text-5xl xl:text-6xl">
           Talk to our team
@@ -25,8 +25,8 @@ const TeamInfo: React.FC = () => {
             />
           </div>
 
-          <div className="flex w-1/2 items-center justify-between bg-gray-100 sm:w-3/6">
-            <p className="bg-gray-300 sm:whitespace-nowrap">
+          <div className="flex w-1/2 items-center justify-between sm:w-3/6">
+            <p className="sm:whitespace-nowrap">
               123 Maple Street, SpringField, IL, USA
             </p>
           </div>
