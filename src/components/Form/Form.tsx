@@ -32,13 +32,16 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const messageLengthClass =
+    form.message.length >= 500 ? "text-red-600" : "text-neutral-500";
+
   errors;
   const validateForm = (): FormErrors => {
     const currErrors: FormErrors = {};
 
     if (!nameChecker(form.name)) {
-      currErrors.name =
-        "Name should be longer than 20 characters and should include first and last names.";
+      currErrors.name = "Name should be longer than 20 chars.";
     }
     if (!emailChecker(form.email)) {
       currErrors.email = "Enter a valid email.";
@@ -81,7 +84,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
   return (
     <form
       onSubmit={handleSubmission}
-      className="flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-lg md:h-[398px] md:w-[704px] lg:w-[592px]"
+      className=" flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-xl md:h-[398px] md:w-[704px] lg:w-[592px]"
     >
       <div className="mb-5 flex h-full flex-col justify-around py-1 md:justify-around">
         <div className="flex flex-col justify-between md:flex md:flex-row md:justify-between ">
@@ -95,6 +98,9 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
               placeholder="Your name"
               className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <span className="line-clamp-1 text-sm text-red-600">
+              {errors.name}
+            </span>
           </div>
 
           <div className="flex flex-col md:w-[276px]">
@@ -109,6 +115,9 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
               placeholder="example@example.com"
               className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <span className="line-clamp-1 text-sm text-red-600">
+              {errors.email}
+            </span>
           </div>
         </div>
 
@@ -125,9 +134,16 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
             placeholder="Write your message..."
             className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
-          <label className="flex justify-end text-sm font-medium text-neutral-500 underline">
-            {form.message.length}/500
-          </label>
+          <div className="flex justify-between">
+            <span className="line-clamp-1 text-sm text-red-600">
+              {errors.message}
+            </span>
+            <label
+              className={`flex justify-end text-sm font-medium underline ${messageLengthClass}`}
+            >
+              {form.message.length}/500
+            </label>
+          </div>
         </div>
       </div>
 
