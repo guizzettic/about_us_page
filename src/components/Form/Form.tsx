@@ -47,12 +47,11 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
       currErrors.email = "Enter a valid email.";
     }
     if (!messageChecker(form.message)) {
-      currErrors.message = "Message should be less than 500 characters.";
+      currErrors.message = "Message is too long.";
     }
     if (form.message.length < 4) {
-      currErrors.message = "Message should be longer than 4 characters.";
+      currErrors.message = "Message is too short.";
     }
-    console.log(currErrors);
     return currErrors;
   };
 
@@ -84,7 +83,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
   return (
     <form
       onSubmit={handleSubmission}
-      className=" flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-xl md:h-[398px] md:w-[704px] lg:w-[592px]"
+      className="flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-xl md:h-[398px] md:w-[704px] lg:w-[592px]"
     >
       <div className="mb-5 flex h-full flex-col justify-around py-1 md:justify-around">
         <div className="flex flex-col justify-between md:flex md:flex-row md:justify-between ">
