@@ -79,7 +79,10 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
   };
 
   return (
-    <form className="flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-lg md:h-[398px] md:w-[704px] lg:w-[592px]">
+    <form
+      onSubmit={handleSubmission}
+      className="flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-lg md:h-[398px] md:w-[704px] lg:w-[592px]"
+    >
       <div className="mb-5 flex h-full flex-col justify-around py-1 md:justify-around">
         <div className="flex flex-col justify-between md:flex md:flex-row md:justify-between ">
           <div className="flex flex-col md:w-[276px]">
@@ -129,7 +132,6 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
       </div>
 
       <button
-        onClick={handleSubmission}
         type="submit"
         className="h-[44px] w-full rounded-md bg-indigo-700 text-white shadow-md"
       >
