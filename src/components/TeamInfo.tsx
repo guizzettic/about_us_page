@@ -9,7 +9,7 @@ const TeamInfo: React.FC = () => {
         <p className="text-4xl font-semibold tracking-wide text-neutral-900 md:text-5xl xl:text-6xl">
           Talk to our team
         </p>
-        <p className="text-lg text-gray-500 md:text-xl">
+        <p className="text-lg text-neutral-600 md:text-xl">
           We're commited to delivering the support you require to make your
           experience as smooth as possible.
         </p>

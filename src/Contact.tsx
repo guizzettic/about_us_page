@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   status;
   setStatus;
   return (
-    <section className="relative m-[16px] flex h-[976px] w-[343px] flex-col items-center justify-around rounded-md bg-white pt-10 shadow-lg sm:h-[992px] sm:w-[736px] xl:h-[736px] xl:w-[1408px] xl:flex-row xl:justify-around">
+    <section className="relative m-[16px] flex h-[976px] w-[343px] flex-col items-center justify-around rounded-md bg-white shadow-lg sm:h-[992px] sm:w-[736px] md:py-6  xl:h-[736px] xl:w-[1408px] xl:flex-row xl:justify-around">
       {status === "error" && <Error />}
       <TeamInfo />
       {status === "success" ? (
