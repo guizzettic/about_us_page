@@ -93,7 +93,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               value={form.name}
               placeholder="Your name"
-              className="bg-nuetral-500 rounded border px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -107,7 +107,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               value={form.email}
               placeholder="example@example.com"
-              className="bg-nuetral-500 rounded border px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         </div>
@@ -123,7 +123,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             value={form.message}
             placeholder="Write your message..."
-            className="bg-nuetral-500 rounded border px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
           <label className="flex justify-end text-sm font-medium text-neutral-500 underline">
             {form.message.length}/500
