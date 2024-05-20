@@ -83,27 +83,27 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
   return (
     <form
       onSubmit={handleSubmission}
-      className="flex h-[456px] w-[319px] flex-col justify-between rounded-lg border-neutral-400 bg-white p-4 shadow-xl md:h-[398px] md:w-[704px] lg:w-[592px]"
+      className="flex h-[456px] w-[319px] flex-col rounded-lg border border-neutral-200 bg-white p-3 shadow-lg md:h-[398px] md:w-[704px] lg:w-[592px]"
     >
-      <div className="mb-5 flex h-full flex-col justify-around py-1 md:justify-around">
-        <div className="flex flex-col justify-between md:flex md:flex-row md:justify-between ">
-          <div className="flex flex-col md:w-[276px]">
-            <label className="text-sm font-medium text-neutral-700">Name</label>
+      <div className="mb-5 flex h-full flex-col justify-around md:justify-between">
+        <div className="flex h-2/6 flex-col justify-between md:flex md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col md:w-[47%]">
+            <label className="text-sm font-medium text-neutral-600">Name</label>
             <input
               type="text"
               name="name"
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               value={form.name}
               placeholder="Your name"
-              className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border bg-neutral-100 px-3 py-2 text-sm  text-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <span className="line-clamp-1 text-sm text-red-600">
               {errors.name}
             </span>
           </div>
 
-          <div className="flex flex-col md:w-[276px]">
-            <label className="text-sm font-medium text-neutral-700">
+          <div className="flex flex-col md:w-[47%]">
+            <label className="text-sm font-medium text-neutral-600">
               Email
             </label>
             <input
@@ -112,7 +112,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               value={form.email}
               placeholder="example@example.com"
-              className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border bg-neutral-100 px-3 py-2 text-sm  text-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <span className="line-clamp-1 text-sm text-red-600">
               {errors.email}
@@ -131,7 +131,7 @@ const Form: React.FC<FormProps> = ({ setStatus }) => {
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             value={form.message}
             placeholder="Write your message..."
-            className="rounded border bg-neutral-100 px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="rounded border bg-neutral-100 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
           <div className="flex justify-between">
             <span className="line-clamp-1 text-sm text-red-600">
